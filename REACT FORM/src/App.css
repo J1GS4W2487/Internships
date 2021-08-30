@@ -1,0 +1,118 @@
+.App {
+  margin: auto;
+  width: 50%;
+ text-align: center;
+}
+
+.myForm1{
+  width: 100%;
+  background-color: rebeccapurple;
+  border: 5px;
+  padding: 30px;
+}
+
+.formField1{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px;
+  border-radius: 10px solid;
+  box-sizing: border-box;
+}
+
+.myForm{
+  width: 100%;
+  background-color: dodgerblue;
+  border: 5px;
+  padding: 40px;
+}
+
+.formField{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px;
+  border-radius: 10px solid;
+  box-sizing: border-box;
+}
+
+.myButton{
+  width: 100%;
+  background-color: green;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+
+  border: 4px;
+  cursor: pointer;
+}
+
+.myList{
+  list-style: none;
+}
+
+.myListButton{
+  border: 1px solid green;
+  margin: 8px;
+}
+
+
+.myTable{
+background-color: orange;
+padding: 10px;
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 112.5%;
+border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+.th,tr{
+  background-color: orange;
+padding: 10px;
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 112.5%;
+border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#nav {
+  width: 100%;
+ align-items: right;
+  margin: 0 0 0 0;
+  padding: 0;
+  display: inline-block;
+  background-color: black;
+}
+
+#nav li {
+      display: inline-block;
+      padding: 8px 15px;
+
+      font-weight: bold;
+      color: aquamarine;
+      justify-content: right;
+   
+    }
+
+    #nav li a{
+      display: inline-block;
+      padding: 8px 15px;
+
+      font-weight: bold;
+      color: aquamarine;
+      justify-content: right;
+      text-align: right;
+    
+    }
+
+    #nav p{
+      display: inline-block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: lightcoral;
+    
+    }
