@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Login Page</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style type="text/css"> body{
+background-color: gold; font-family: 'Zilla Slab', serif;
+color: #00416a; font-size: 20px;
+}
+
+
+a{
+font-family: 'Zilla Slab', serif; color:#00416a;
+font-size: 25px;
+color:black;
+}
+ 
+li{
+display: inline; float: right; margin: 20px;
+color:black;
+}
+
+
+li a:hover {
+background-color:darkblue; color: black;
+border-radius: 90px; padding-top: 5px; padding-left: 15px; padding-right: 15px; padding-bottom: 5px;
+}
+
+
+li a.active {
+background-color:orange; color: black;
+padding-top: 5px; padding-left: 15px; padding-right: 15px; padding-bottom: 5px; border-radius: 90px;
+}
+
+#jig{
+  color: black;
+  background-color:lightseagreen;
+}
+
+.modal-title{
+font-family: 'Zilla Slab', serif; color: #00416a;
+font-size: 30px; text-align:center;
+}
+ 
+
+.col-md-4{
+margin-left:15%;
+}
+
+
+.card-header{
+font-family: 'Zilla Slab', serif; color: #00416a;
+font-size: 30px; text-align:center;
+}
+
+
+.bg{
+background-repeat: no-repeat; background-size: 1537px 900px; background-image: url(bg3.jpg)
+}
+
+
+
+
+</style>
+
+
+</head>
+<body>
+  <script>
+    window.alert("LOGIN SUCCESSFULLTY TO CSI")
+  </script>
+
+
+  <nav id= "jig" class="navbar navbar-expand-md navbar-dark " font-color="black">
+    <a href="index.php" class="brand"><img src="img/csi-logo.jpg"></a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+        </div>
+     </nav>
+
+<section align="center">
+<br><br><br>
+
+
+<div class="col-md-4">
+<div class="card-header" style="background-color:orange"><b>Login Here</b></div>
+<div class="card-body" style="background-color:aqua">
+<form class="form" method="post" action="/login_validation">
+<label>Email</label>
+<input type="email" class="form-control" name="email" required><br>
+<label>Password</label>
+<input type="password" class="form-control" name="password" required><br>
+<a href="/forgot">Forgot Password ?</a><br>
+<input type="submit" class="btn btn-block btn-lg" value="Login" style="background-color:orange">
+</form>
+<br>
+<a>Click here to Register</a>
+<button onclick="document.getElementById('id01').style.display='block'" class="btn" style="background-color:orange">Register</button>
+</div>
+</div>
+
+
+</section>
+
+
+
+
+<div id="id01" class="w3-modal">
+<div class="w3-modal-content">
+<span onclick="document.getElementById('id01')"></span>
+
+
+<div class="modal-header" style="background-color:orange">
+<h4 class="modal-title" style="text-align: center;"><b>Registration Form</b></h4>
+</div>
+ 
+
+<div class="modal-body" style="background-color:aqua">
+
+
+<form class="form" name="myform" method="post" action="/add_user" onsubmit="return validateform()">
+<label>Name</label>
+<input type="name" class="form-control" name="name" placeholder="Enter your name" required><br>
+<label>Contact Number</label>
+<input name="contact" placeholder="Enter your contact number" id="mobile" type="number" required onkeyup="check(); return false;"><br><br>
+<label>Department</label>
+<select name="dept">
+<option value="cs">Computer Science</option>
+<option value="it">Information Technology</option>
+<option value="elec">Electronics</option>
+<option value="mech">Mechanical</option>
+</select><br><br>
+<label>Semester</label>
+<select name="sem">
+<option value="I">I</option>
+<option value="II">II</option>
+<option value="III">III</option>
+<option value="IV">IV</option>
+<option value="V">V</option>
+<option value="VI">VI</option>
+<option value="VII">VII</option>
+<option value="VIII">VIII</option>
+</select><br><br>
+<label>Email</label>
+<input type="email" placeholder="Enter your email" class="form-control" name="uemail" required><br>
+<label>Password</label>
+ 
+<input type="password" placeholder="Enter your password" class="form-control" name="password" required><br><br>
+<input type="submit" class="btn btn-block btn-lg" value="Register" style="background-color:orange">
+</form>
+<br>
+<p>Already a member? <a href="file:///C:/Users/manas/OneDrive/Documents/CSI%20WEBSITE/login.html">Login Here..</a></p>
+
+
+</div>
+
+
+</div>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+
+// When the user clicks anywhere outside of the modal, close it window.onclick = function(event) {
+if (event.target == modal) { modal.style.display = "none";
+}
+
+</script>
+
+
+<script type="text/javascript"> function check()
+{
+
+
+var mobile = document.getElementById('mobile'); var c1 = "#d0f0c0";
+var c2 = "#ffdab9";
+ 
+
+if(mobile.value.length>10){ mobile.style.backgroundColor = c2; alert("Only 10 digits are allowed");
+}
+
+
+else if(mobile.value.length<10){ mobile.style.backgroundColor = c2;
+}
+
+
+else if(mobile.value.length==10){ mobile.style.backgroundColor = c1;
+}
+
+
+}
+</script>
+
+
+<script>
+function validateform(){
+var name=document.myform.name.value;
+var password=document.myform.password.value;
+
+
+
+
+
+if (name==null || name==""){ alert("Name can't be blank"); return false;
+}
+else if(password.length<6){
+alert("Password must be at least 6 characters long"); return false;
+}
+ 
+
+else{
+alert("User added sucessfully")
+}
+
+
+}
+
+
+</script>
+
+
+<script type="text/javascript">
+
+
+function ValidateEmail(input) {
+
+
+var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+
+if (input.value.match(validRegex)) {
+
+
+alert("Valid email address!");
+
+
+document.form1.text1.focus();
+
+
+return true;
+
+
+} else {
+
+
+alert("Invalid email address!");
+
+
+document.form1.text1.focus();
+
+
+return false;
+
+
+}
+ 
+
+}
+</script>
+
+
+</body>
+</html>
